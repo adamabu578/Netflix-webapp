@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Button } from "@/Components/ui/button"
 import { Input } from "@/Components/ui/input"
 import { ChevronRight } from "lucide-react"
+import Link from "next/link";
 
 export default function Netflix() {
   const [email, setEmail] = useState("")
@@ -40,9 +41,12 @@ export default function Netflix() {
               </g>
             </svg>
           </div>
-          <Button variant="destructive" size="sm" className="rounded px-4 py-1 h-auto font-medium">
-            Sign In
+      
+         <Link href="/Signin">
+          <Button variant="destructive" size="sm" className="rounded px-4 py-1 h-auto font-medium cursor-pointer">
+           Sign In
           </Button>
+          </Link>
         </header>
 
         {/* Hero Section */}
@@ -61,12 +65,14 @@ export default function Netflix() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Button variant="destructive" size="lg" className="h-14 px-6 text-xl font-medium">
-              Get Started
-              <ChevronRight className="ml-2 h-5 w-5" />
-            </Button>
+             <Link href="/Signup">
+             <Button variant="destructive" size="lg" className="h-14 px-6 text-xl font-medium cursor-pointer">
+             Get Started
+             <ChevronRight className="ml-2 h-5 w-5" />
+             </Button>
+             </Link>
           </div>
-        </main>
+          </main>
 
         {/* Gradient Border */}
         <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 opacity-80" />

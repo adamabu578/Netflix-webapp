@@ -5,6 +5,7 @@ import TrendingSection from "@/Components/Trending/Trending-Section";
 import FeaturesSection from "@/Components/Featured/Featured";
 import { FaqAccordion } from "@/Components/Faq/Faq-accordion";
 import { EmailForm } from "@/Components/Faq/Email-form";
+import Footer from "@/Components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <div className="mt-12 text-center">
           <p className="text-lg mb-4">Ready to watch? Enter your email to create or restart your membership.</p>
           <EmailForm />
+          <Footer />
         </div>
       </section>
     </main>

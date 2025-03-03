@@ -6,6 +6,7 @@ import { useState } from "react"
 import { ChevronRight } from "lucide-react"
 import { Button } from "@/Components/ui/button"
 import { Input } from "@/Components/ui/input"
+import Link from "next/link"
 
 export function EmailForm() {
   const [email, setEmail] = useState("")
@@ -28,10 +29,12 @@ export function EmailForm() {
           className="h-12 bg-black/40 border-zinc-600 text-white placeholder:text-zinc-400"
         />
       </div>
-      <Button type="submit" className="h-12 bg-red-600 hover:bg-red-700 text-white font-medium px-6">
-        Get Started
+       <Link href="/Signup">
+       <Button type="submit"  className="h-12 bg-red-600 hover:bg-red-700 text-white font-medium px-6 cursor-pointer">
+         Get Started
         <ChevronRight className="ml-2 h-5 w-5" />
-      </Button>
+        </Button>
+        </Link>
     </form>
   )
 }
